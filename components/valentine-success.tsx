@@ -131,14 +131,20 @@ export default function ValentineSuccess() {
           </button>
 
           {showPhoto && (
-            <div className="mt-6 p-4 bg-rose-50 rounded-[2rem] border-2 border-white shadow-inner aspect-video flex items-center justify-center relative overflow-hidden animate-in zoom-in duration-700">
-              <div className="text-center">
-                <p className="text-7xl mb-4">📸</p>
-                <p className="text-2xl font-serif italic text-rose-600 font-black mb-1">Our Love Story</p>
-                <p className="text-rose-400 text-base uppercase tracking-[0.2em] font-bold">Abhishekh & My Love</p>
+            <div className="mt-6 p-2 bg-white rounded-[2rem] border-2 border-white shadow-2xl aspect-video flex items-center justify-center relative overflow-hidden animate-in zoom-in duration-1000">
+              <div className="relative w-full h-full group">
+                <img
+                  src="/couple.jpg"
+                  alt="Our Special Moment"
+                  className="w-full h-full object-cover rounded-[1.5rem] shadow-inner transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-rose-900/40 to-transparent flex flex-col justify-end p-6 text-left">
+                  <p className="text-white text-2xl font-serif italic font-black shadow-sm">Our Love Story</p>
+                  <p className="text-rose-100 text-sm uppercase tracking-[0.2em] font-bold">Abhishekh & My Love</p>
+                </div>
               </div>
-              <div className="absolute top-4 left-4 text-3xl animate-spin-slow">💖</div>
-              <div className="absolute bottom-4 right-4 text-3xl animate-spin-slow" style={{ animationDirection: 'reverse' }}>💍</div>
+              <div className="absolute top-4 left-4 text-3xl animate-spin-slow pointer-events-none">💖</div>
+              <div className="absolute bottom-4 right-4 text-3xl animate-spin-slow pointer-events-none" style={{ animationDirection: 'reverse' }}>💍</div>
             </div>
           )}
         </div>
