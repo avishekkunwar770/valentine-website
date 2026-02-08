@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Georgia', serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 99%;
+    --foreground: 335 76% 25%;
+    --card: 0 0% 100%;
+    --card-foreground: 335 76% 25%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 335 76% 25%;
+    --primary: 335 76% 35%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 335 68% 75%;
+    --secondary-foreground: 335 76% 25%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 348 100% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 335 68% 85%;
+    --input: 0 0% 96%;
+    --ring: 335 76% 35%;
+    --chart-1: 335 76% 35%;
+    --chart-2: 348 100% 60%;
+    --chart-3: 335 68% 75%;
+    --chart-4: 0 0% 95%;
+    --chart-5: 0 0% 80%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 335 76% 25%;
+    --sidebar-primary: 335 76% 35%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 348 100% 60%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 335 68% 85%;
+    --sidebar-ring: 348 100% 60%;
+  }
+  .dark {
+    --background: 335 20% 8%;
+    --foreground: 335 68% 85%;
+    --card: 335 20% 12%;
+    --card-foreground: 335 68% 85%;
+    --popover: 335 20% 12%;
+    --popover-foreground: 335 68% 85%;
+    --primary: 348 100% 60%;
+    --primary-foreground: 335 20% 8%;
+    --secondary: 335 76% 35%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 335 20% 20%;
+    --muted-foreground: 0 0% 63%;
+    --accent: 335 68% 75%;
+    --accent-foreground: 335 20% 8%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 335 20% 20%;
+    --input: 335 20% 20%;
+    --ring: 348 100% 60%;
+    --chart-1: 348 100% 60%;
+    --chart-2: 335 76% 35%;
+    --chart-3: 335 68% 75%;
+    --chart-4: 335 20% 30%;
+    --chart-5: 335 20% 25%;
+    --sidebar-background: 335 20% 10%;
+    --sidebar-foreground: 335 68% 85%;
+    --sidebar-primary: 348 100% 60%;
+    --sidebar-primary-foreground: 335 20% 8%;
+    --sidebar-accent: 335 76% 35%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 335 20% 20%;
+    --sidebar-ring: 348 100% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes fallHearts {
+  0% {
+    opacity: 1;
+    transform: translateY(-10vh) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+@keyframes fallFlowers {
+  0% {
+    opacity: 1;
+    transform: translateY(-10vh) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100vh) rotate(720deg);
+  }
+}
+
+@keyframes bounce-heart {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes runaway {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(500px);
+  }
+}
+
+.fall-animation {
+  animation: fallHearts 6s ease-in infinite;
+}
+
+.fall-flowers {
+  animation: fallFlowers 8s ease-in infinite;
+}
+
+.bounce-heart-animation {
+  animation: bounce-heart 1s ease-in-out infinite;
+}
+
+.runaway-animation {
+  animation: runaway 0.8s ease-in-out;
+}
